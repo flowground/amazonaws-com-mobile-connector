@@ -1,11 +1,11 @@
-# ![LOGO](logo.png) AWS Mobile MSP Connector
+# ![LOGO](logo.png) AWS Mobile **flow**ground Connector
 
 ## Description
 
-A generated MSP connector for the AWS Mobile API (version 2017-07-01).
+A generated **flow**ground connector for the AWS Mobile API (version 2017-07-01).
 
 Generated from: https://api.apis.guru/v2/specs/amazonaws.com/mobile/2017-07-01/swagger.json<br/>
-Generated at: 2019-05-07T11:16:19+03:00
+Generated at: 2019-05-07T17:36:00+03:00
 
 ## API Description
 
@@ -136,7 +136,7 @@ Supported authorization schemes:
 
 ## License
 
-flowground :- Telekom iPaaS / amazonaws-com-mobile-connector<br/>
+**flow**ground :- Telekom iPaaS / amazonaws-com-mobile-connector<br/>
 Copyright © 2019, [Deutsche Telekom AG](https://www.telekom.de)<br/>
 contact: flowground@telekom.de
 
