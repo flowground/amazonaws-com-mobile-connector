@@ -1,0 +1,193 @@
+{
+    "title": "AWS Mobile",
+    "description": " AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those resources. ",
+    "docsUrl": "https://docs.aws.amazon.com/mobile/",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mobile/2017-07-01/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://mobile.amazonaws.com/",
+                    "http://mobile.amazonaws.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "hmac": {
+                "label": "Authorization (hmac)",
+                "viewClass": "TextFieldView",
+                "note": "Amazon Signature authorization v4"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "ListBundles": {
+            "main": "./lib/actions/ListBundles.js",
+            "title": " List all available bundles. ",
+            "description": " List all available bundles. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListBundles.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DescribeBundle": {
+            "main": "./lib/actions/DescribeBundle.js",
+            "title": " Get the bundle details for the requested bundle id. ",
+            "description": " Get the bundle details for the requested bundle id. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DescribeBundle.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ExportBundle": {
+            "main": "./lib/actions/ExportBundle.js",
+            "title": " Generates customized software development kit (SDK) and or tool packages used to integrate mobile web or mobile app clients with backend AWS resources. ",
+            "description": " Generates customized software development kit (SDK) and or tool packages used to integrate mobile web or mobile app clients with backend AWS resources. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ExportBundle.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ExportProject": {
+            "main": "./lib/actions/ExportProject.js",
+            "title": " Exports project configuration to a snapshot which can be downloaded and shared. Note that mobile app push credentials are encrypted in exported projects, so they can only be shared successfully within the same AWS account. ",
+            "description": " Exports project configuration to a snapshot which can be downloaded and shared. Note that mobile app push credentials are encrypted in exported projects, so they can only be shared successfully within the same AWS account. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ExportProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DescribeProject": {
+            "main": "./lib/actions/DescribeProject.js",
+            "title": " Gets details about a project in AWS Mobile Hub. ",
+            "description": " Gets details about a project in AWS Mobile Hub. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DescribeProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListProjects": {
+            "main": "./lib/actions/ListProjects.js",
+            "title": " Lists projects in AWS Mobile Hub. ",
+            "description": " Lists projects in AWS Mobile Hub. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListProjects.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateProject": {
+            "main": "./lib/actions/CreateProject.js",
+            "title": " Creates an AWS Mobile Hub project. ",
+            "description": " Creates an AWS Mobile Hub project. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteProject": {
+            "main": "./lib/actions/DeleteProject.js",
+            "title": " Delets a project in AWS Mobile Hub. ",
+            "description": " Delets a project in AWS Mobile Hub. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateProject": {
+            "main": "./lib/actions/UpdateProject.js",
+            "title": " Update an existing project. ",
+            "description": " Update an existing project. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
